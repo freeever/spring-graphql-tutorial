@@ -1,4 +1,4 @@
-package com.springgraphql.tutorial.resolver;
+package com.springgraphql.tutorial.resolver.bank.query;
 
 import com.springgraphql.tutorial.domain.bank.BankAccount;
 import com.springgraphql.tutorial.domain.bank.Client;
@@ -18,8 +18,12 @@ public class BankAccountResolver implements GraphQLQueryResolver {
     public BankAccount bankAccount(UUID id) {
         log.info("Retrieving bank account id: {}", id);
         List<String> middleNames = Arrays.asList(new String[] {"Mid1", "Mid2"});
-        Client client = Client.builder().id(UUID.randomUUID()).firstName("Michael")
-                .lastName("Jordan").middleNames(middleNames).build();
-        return BankAccount.builder().id(id).client(client).currency(Currency.CAD).build();
+//        Client clientA = Client.builder().id(UUID.randomUUID()).firstName("ClientA")
+//                .lastName("Jordan").middleNames(middleNames).build();
+//        Client clientB = Client.builder().id(UUID.randomUUID()).firstName("ClientB")
+//                .lastName("Jordan").middleNames(middleNames).build();
+//        clientA.setClient(clientB);
+//        clientB.setClient(clientA);
+        return BankAccount.builder().id(id).currency(Currency.CAD).build();
     }
 }

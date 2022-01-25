@@ -1,0 +1,11 @@
+# Gets Philip's Bank account
+query GET_BANK_ACCOUNT($id: ID) {  # Bank account query resolver
+    bankAccount(id: $id) {
+        currency
+        client {   // Client resolver
+            id
+            firstName
+            lastName
+        }
+    }
+}
