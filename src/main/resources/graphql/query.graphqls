@@ -1,0 +1,4 @@
+# All available queries on this graphql server - This is displayed in the Documentation Explorer
+type Query {
+    bankAccount(id: ID): BankAccount
+}

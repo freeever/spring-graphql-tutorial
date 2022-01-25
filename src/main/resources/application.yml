@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: learn-spring-graphql
+
+server:
+  http2:
+    enabled: true
