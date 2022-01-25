@@ -2,10 +2,11 @@ package com.springgraphql.tutorial.resolver.bank;
 
 import com.springgraphql.tutorial.domain.bank.BankAccount;
 import com.springgraphql.tutorial.domain.bank.Client;
-import graphql.GraphQLException;
 import graphql.kickstart.tools.GraphQLResolver;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
+
+import java.util.UUID;
 
 @Slf4j
 @Component
