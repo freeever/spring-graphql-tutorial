@@ -15,7 +15,7 @@ graphql:
       Authorization: Bearer TOKEN
     tabs:
       - name: Bank account sample query
-        query: classpath:playground/bank_account.graphql
-        variables: classpath:playground/bank_ account_variables.json
+        query: classpath:graphql/playground/bank_account.graphql
+        variables: classpath:graphql/playground/bank_account_variables.json
 voyager:
   enabled: false
