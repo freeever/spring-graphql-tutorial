@@ -3,6 +3,8 @@ package com.springgraphql.tutorial.domain.bank;
 import lombok.Builder;
 import lombok.Value;
 
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import java.util.UUID;
 
 @Builder
@@ -10,6 +12,8 @@ import java.util.UUID;
 public class BankAccount {
 
     UUID id;
-     Currency currency;
     Client client;
+    Currency currency;
+    ZonedDateTime createdAt;
+    LocalDate createdOn;
 }
