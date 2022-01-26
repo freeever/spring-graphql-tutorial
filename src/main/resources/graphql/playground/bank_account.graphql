@@ -2,10 +2,19 @@
 query GET_BANK_ACCOUNT($id: ID) {  # Bank account query resolver
     bankAccount(id: $id) {
         currency
-        client {   // Client resolver
+        client {   # Client resolver
             id
             firstName
             lastName
         }
+    }
+}
+
+mutation CREATE_BANK_ACCOUNT {
+    createBankAccount(input: {
+        firstName: "Smith"
+    }) {
+        id
+        currency
     }
 }

@@ -10,6 +10,6 @@ import java.util.UUID;
 public class BankAccount {
 
     UUID id;
-    Currency currency;
+     Currency currency;
     Client client;
 }
