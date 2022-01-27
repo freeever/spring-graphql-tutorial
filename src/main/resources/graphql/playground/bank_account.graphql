@@ -19,3 +19,12 @@ mutation CREATE_BANK_ACCOUNT {
         currency
     }
 }
+
+# Update bank account
+mutation UPDATE_BANK_ACCOUNT($id: ID) {
+    updateBankAccount(id: $id,
+    name: "",
+    age: 30) {
+        id
+    }
+}

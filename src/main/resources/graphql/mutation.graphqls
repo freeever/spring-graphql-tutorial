@@ -2,10 +2,15 @@ scalar NonNegativeInt
 scalar DateTime
 scalar Date
 
+directive @NotBlank(message : String = "updateBankAccount.name") on ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION
+
 # All mutations available in graphql
 type Mutation {
     # Create a bank account
     createBankAccount(input: CreateBankAccountInput): BankAccount!
+
+    # Update a bank account
+    updateBankAccount(id: ID, name: String @NotBlank, age: Int): BankAccount!
 
     # Upload a file
     uploadFile: ID!
