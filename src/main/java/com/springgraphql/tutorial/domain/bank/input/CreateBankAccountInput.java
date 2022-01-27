@@ -2,8 +2,11 @@ package com.springgraphql.tutorial.domain.bank.input;
 
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+
 @Data
 public class CreateBankAccountInput {
-    private String firstName;
-    private int age;
+    @NotBlank
+    String firstName;
+    int age;
 }
