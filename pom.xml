@@ -16,12 +16,16 @@
     <properties>
         <java.version>11</java.version>
         <graphql.version>11.0.0</graphql.version>
-
+        <graphql.extended.version>17.0</graphql.extended.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -73,7 +77,7 @@
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-extended-scalars</artifactId>
-            <version>17.0</version>
+            <version>${graphql.extended.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.graphql-java</groupId>
@@ -84,7 +88,7 @@
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-extended-validation</artifactId>
-            <version>17.0</version>
+            <version>${graphql.extended.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.graphql-java</groupId>

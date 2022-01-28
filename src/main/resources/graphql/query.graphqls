@@ -2,4 +2,5 @@
 type Query {
     bankAccount(id: ID): BankAccount
     bankAccounts(first: Int!, after: String): BankAccountConnection @connection (for: "BankAccount")
+
 }

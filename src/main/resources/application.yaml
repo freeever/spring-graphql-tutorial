@@ -1,6 +1,13 @@
 spring:
   application:
     name: learn-spring-graphql
+  data:
+    mongodb:
+#      authentication-database: admin
+#      username: root
+#      password: root
+      url: mongodb://localhost:27017/tbsmpoc
+      database: tbsmpoc
 
 server:
   http2:
@@ -19,3 +26,12 @@ graphql:
         variables: classpath:graphql/playground/bank_account_variables.json
 voyager:
   enabled: false
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
